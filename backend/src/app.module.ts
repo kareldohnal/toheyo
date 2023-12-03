@@ -4,6 +4,8 @@ import { AppService } from './app.service';
 import { UserModule } from "./user/user.module";
 import { MongooseModule } from "@nestjs/mongoose";
 import { AuthModule } from "./auth/auth.module";
+import { ServeStaticModule } from "@nestjs/serve-static";
+import { join } from 'path';
 import * as dotenv from "dotenv";
 dotenv.config();
 
@@ -17,7 +19,10 @@ dotenv.config();
     user: process.env.DATABASE_USER,
     pass: process.env.DATABASE_PASSWORD,
     dbName: process.env.DATABASE_DBNAME
-  }), UserModule, AuthModule],
+  }),
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', "..", 'client'),
+    }), UserModule, AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })
