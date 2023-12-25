@@ -7,3 +7,10 @@
 
 ## Notes
 - Unverified users are invisible to others + are deleted after 30 days
+
+## Test User
+- Username: testuser
+- Password: testuser123
+
+## Continue with
+- Funguje login, pokračovat s autorizací přes cookie a načtení uživatele po autorizaci
