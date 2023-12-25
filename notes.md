@@ -13,4 +13,4 @@
 - Password: testuser123
 
 ## Continue with
-- Funguje login, pokračovat s autorizací přes cookie a načtení uživatele po autorizaci
+- Funguje login, načtení uživatele po autorizaci

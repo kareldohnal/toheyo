@@ -4,6 +4,7 @@ export const loginUserWithUsernameAndPassword = async (username: string, passwor
     try {
         const response = await fetch(`${apiRoot}/auth/login`, {
             method: "POST",
+            credentials: "include",
             headers: {
                 "Content-Type": "application/json",
             },
